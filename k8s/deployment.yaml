@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: zero-downtime-gitops
+  namespace: gitops-demo
+
+spec:
+  replicas: 3
+
+  strategy:
+    type: RollingUpdate
+
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
+  selector:
+    matchLabels:
+      app: zero-downtime-gitops
+
+  template:
+    metadata:
+      labels:
+        app: zero-downtime-gitops
+
+    spec:
+      containers:
+      - name: flask-app
+
+        image: ghcr.io/muhammad-ahmadd-shafiq/zero-downtime-gitops:v2
+
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 5000
+
+        envFrom:
+        - configMapRef:
+            name: app-config
+
+        - secretRef:
+            name: app-secret
+
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+
+          initialDelaySeconds: 10
+          periodSeconds: 10
+
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
