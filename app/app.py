@@ -2,12 +2,12 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-APP_VERSION = "v2.0.0"
+APP_VERSION = "v3.0.0"
 
 @app.route("/")
 def home():
     return jsonify({
-        "application":"Zero Downtime Gitops Pipeline v2",
+        "application":"Zero Downtime Gitops Pipeline v3",
         "version": APP_VERSION,
         "message": "Application is running"
     })
