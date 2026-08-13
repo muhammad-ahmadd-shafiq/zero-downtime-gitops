@@ -11,8 +11,8 @@ def test_home():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert response.json["application"] == "Zero Downtime Gitops"
-    assert response.json["version"] == "v1.0.0"
+    assert response.json["application"] == "Zero Downtime Gitops Pipeline v2"
+    assert response.json["version"] == "v2.0.0"
 
 
 def test_health():
@@ -30,4 +30,4 @@ def test_version():
     response =client.get("/version")
 
     assert response.status_code == 200
-    assert response.json["version"] == "v1.0.0"
+    assert response.json["version"] == "v2.0.0"
