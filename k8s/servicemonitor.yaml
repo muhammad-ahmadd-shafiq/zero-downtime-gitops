@@ -5,6 +5,9 @@ metadata:
   name: zero-downtime-gitops
   namespace: monitoring
 
+  labels:
+    release: monitoring
+
 spec:
   selector:
     matchLabels:
