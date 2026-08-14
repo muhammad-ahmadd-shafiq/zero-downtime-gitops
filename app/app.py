@@ -1,5 +1,5 @@
-from flask import Flask, jsonify
-
+from flask import Flask, jsonify, Response, request
+from prometheus_client import Counter, generate_latest
 app = Flask(__name__)
 
 APP_VERSION = "v3.0.0"
@@ -35,10 +35,10 @@ def version():
         "version": APP_VERSION
     })
 
-app.route("/metrics")
+@app.route("/metrics")
 def metrics():
     return generate_latest(), 200, {
-        "Content-type": "text/plain"
+        "Content-Type": "text/plain"
     }
 
 if __name__ == "__main__":

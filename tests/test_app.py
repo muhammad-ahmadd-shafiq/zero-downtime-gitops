@@ -31,3 +31,10 @@ def test_version():
 
     assert response.status_code == 200
     assert response.json["version"] == "v3.0.0"
+
+def test_metrics():
+    client = app.test_client()
+
+    response = client.get("/metrics")
+
+    assert response.status_code == 200
