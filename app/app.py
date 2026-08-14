@@ -37,9 +37,9 @@ def version():
 
 @app.route("/metrics")
 def metrics():
-    return generate_latest(), 200, {
-        "Content-Type": "text/plain"
-    }
-
+    return Response(
+        generate_latest(),
+        mimetype="text/plain"
+    )
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=5000)
