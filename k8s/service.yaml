@@ -5,12 +5,14 @@ metadata:
   name: zero-downtime-service
   namespace: gitops-demo
 
+  labels:
+    app: zero-downtime-gitops
+
 spec:
   selector:
     app: zero-downtime-gitops
 
   ports:
-  - port: 80
+  - name: http
+    port: 80
     targetPort: 5000
-
-  type: ClusterIP

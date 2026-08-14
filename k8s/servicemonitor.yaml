@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+
+metadata:
+  name: zero-downtime-gitops
+  namespace: monitoring
+
+spec:
+  selector:
+    matchLabels:
+      app: zero-downtime-gitops
+
+  namespaceSelector:
+    matchNames:
+      - gitops-demo
+
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
