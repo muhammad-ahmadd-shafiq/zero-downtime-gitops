@@ -5,3 +5,4 @@ __pycache__/
 
 k8s/secret.yaml*.tar.gz
 kubeseal
+kubeseal-*.tar.gz
