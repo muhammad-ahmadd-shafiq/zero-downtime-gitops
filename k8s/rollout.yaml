@@ -10,6 +10,9 @@ spec:
 
   strategy:
     canary:
+      stableService: zero-downtime-stable
+      canaryService: zero-downtime-canary
+      
       steps:
       - setWeight: 25
       - pause:
@@ -34,7 +37,7 @@ spec:
       containers:
       - name: flask-app
 
-        image: ghcr.io/muhammad-ahmadd-shafiq/zero-downtime-gitops:38c1b06f56f143d8cc006b1b6fa53ccd3459e7ab
+        image: ghcr.io/muhammad-ahmadd-shafiq/zero-downtime-gitops:b6ae8411f6605884059ffea6758b632536342910
 
         imagePullPolicy: Always
 

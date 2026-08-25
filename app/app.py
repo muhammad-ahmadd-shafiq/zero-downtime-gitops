@@ -2,7 +2,7 @@ from flask import Flask, jsonify, Response, request
 from prometheus_client import Counter, generate_latest
 app = Flask(__name__)
 
-APP_VERSION = "v99-test"
+APP_VERSION = "v3.0.0"
 
 REQUEST_COUNT = Counter(
     "http_request_total",
