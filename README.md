@@ -263,14 +263,16 @@ Stable Version: Preserved
 
 ## Screenshots
 
-Add screenshots for:
-
-- GitHub Actions Pipeline
-- ArgoCD Dashboard
-- Argo Rollouts Canary Progress
-- Prometheus Metrics
-- Grafana Dashboard
-- Successful AnalysisRun
+### GitHub Actions Pipeline
+![GitHub Actions](docs/screenshots/github-actions.png)
+### ArgoCD Dashboard
+![Argocd](docs/screenshots/argocd-dashboard.png)
+### Argo Rollouts Canary Progress
+![Argo Rollouts](docs/screenshots/argo-rollouts.png)
+### Prometheus Metrics
+![Prometheus](docs/screenshots/prometheus.png)
+### Successful AnalysisRun
+![Analysis Run](docs/screenshots/analysisrun.png)
 
 ---
 
