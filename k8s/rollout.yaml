@@ -12,15 +12,25 @@ spec:
     canary:
       stableService: zero-downtime-stable
       canaryService: zero-downtime-canary
-      
+
       steps:
       - setWeight: 25
+
       - pause:
           duration: 30s
 
+      - analysis:
+          templates:
+          - templateName: success-rate
+
       - setWeight: 50
+
       - pause:
           duration: 30s
+
+      - analysis:
+          templates:
+          - templateName: success-rate
 
       - setWeight: 100
 
@@ -47,6 +57,7 @@ spec:
         envFrom:
         - configMapRef:
             name: app-config
+
         - secretRef:
             name: app-secret
 
@@ -68,6 +79,7 @@ spec:
           requests:
             cpu: "100m"
             memory: "128Mi"
+
           limits:
             cpu: "500m"
             memory: "512Mi"
