@@ -47,7 +47,7 @@ spec:
       containers:
       - name: flask-app
 
-        image: ghcr.io/muhammad-ahmadd-shafiq/zero-downtime-gitops:96cf2c34fe7e3366837d45ac191b004a37537e86
+        image: ghcr.io/muhammad-ahmadd-shafiq/zero-downtime-gitops:0e94129caf06bbfe057cec05989705c600853148
 
         imagePullPolicy: Always
 
