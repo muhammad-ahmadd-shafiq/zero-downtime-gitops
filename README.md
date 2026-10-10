@@ -1,5 +1,12 @@
 # Zero-Downtime GitOps Pipeline
 
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-%23EF7B4D.svg?style=for-the-badge&logo=argo&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+
 Production-ready GitOps deployment platform built with Kubernetes, ArgoCD, Argo Rollouts, Prometheus, Grafana, GitHub Actions, and GitHub Container Registry (GHCR).
 
 This project demonstrates how modern engineering teams safely deploy applications using automated CI/CD pipelines, canary releases, real-time monitoring, and metric-driven rollback strategies.
@@ -300,11 +307,22 @@ Stable Version: Preserved
 
 ---
 
+---
+
+## License
+
+This project is licensed under the **MIT License** see the [LICENSE](LICENSE) file for complete details.
+
+---
+
 ## Author
 
-**Muhammad Ahmad**
+<div align="center">
 
-BS Information Technology  
-Minhaj University Lahore
+### **Muhammad Ahmad Shafiq**
+*Cloud, Kubernetes & Platform Engineering Specialist*
 
-Focused on Cloud Engineering, Kubernetes, DevOps, and Platform Engineering.
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/muhammad-ahmadd-shafiq)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-ahmadd-shafiq)
+
+</div>
